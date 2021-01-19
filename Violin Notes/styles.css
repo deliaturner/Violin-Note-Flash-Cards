@@ -1,0 +1,65 @@
+body {
+  background-color: lightblue;
+  font-family: "Amiri", serif;
+}
+
+#start {
+  width: 50vh;
+  background-color: whitesmoke;
+  border: 1px solid rgb(27, 200, 216);
+  border-radius: 5px;
+  margin: 30px auto;
+  padding: 10%;
+  font-size: 30px;
+  text-align: center;
+}
+
+#start-button {
+  width: 10em;
+  margin: 30px;
+  padding: 10px;
+  font-weight: bolder;
+  border: 1px solid darkslateblue;
+  border-radius: 5px;
+  color: blue;
+  font-size: 20px;
+  transition-duration: 0.3s;
+}
+
+#start-button:hover {
+  color: lightyellow;
+  background-color: coral;
+}
+
+.note-display {
+  display: flex;
+  justify-content: center;
+  margin: 10vh;
+}
+
+#a-string-note-name-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.note-name-button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 8vh;
+  padding: 10px 20px;
+}
+
+.note-name-button:hover {
+  background-color: orange;
+}
+
+#bottom {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Music Notes</title>
+  </head>
+  <body>
+    <div id="start">
+      <div>A-String Notes</div>
+      <!-- <div id="string-choices">
+        <button class="pick-string" id="pick-e">E String</button>
+        <button class="pick-string" id="pick-a">A String</button>
+        <button class="pick-string" id="pick-d">D String</button>
+        <button class="pick-string" id="pick-g">G String</button>
+      </div> -->
+
+      <button id="start-button">Start</button>
+    </div>
+
+    <section class="note-display">
+      <div class="a-string-all">
+        <div class="a-string">
+          <img
+            class="hidden"
+            id="a0"
+            data-notename="a"
+            src="NoteImages\a0.jpg"
+            alt="A on A String A0"
+          />
+        </div>
+        <div class="a-string">
+          <img
+            class="hidden"
+            id="a1"
+            data-notename="b"
+            src="NoteImages\a1.jpg"
+            alt="B on A String A1"
+          />
+        </div>
+        <div class="a-string">
+          <img
+            class="hidden"
+            id="a2"
+            data-notename="c#"
+            src="NoteImages\a2.jpg"
+            alt="C# on A String A2"
+          />
+        </div>
+        <div class="a-string">
+          <img
+            class="hidden"
+            id="a3"
+            data-notename="d"
+            src="NoteImages\a3.jpg"
+            alt="D on A String A3"
+          />
+        </div>
+      </div>
+      <div class="e-string-all">
+        <div class="e-string" id="e0">
+          <img class="hidden" src="NoteImages\e0.jpg" alt="E on E String E0" />
+        </div>
+        <div class="e-string" id="e1">
+          <img class="hidden" src="NoteImages\e0.jpg" alt="F# on E String E1" />
+        </div>
+        <div class="e-string" id="e2">
+          <img class="hidden" src="NoteImages\e0.jpg" alt="G# on E String E2" />
+        </div>
+        <div class="e-string" id="e3">
+          <img class="hidden" src="NoteImages\e0.jpg" alt="A on E String E3" />
+        </div>
+      </div>
+      <div class="d-string-all">
+        <div class="d-string" id="d0">
+          <img class="hidden" src="NoteImages\d0.jpg" alt="D on D String D0" />
+        </div>
+        <div class="d-string" id="d1">
+          <img class="hidden" src="NoteImages\d0.jpg" alt="E on D String D1" />
+        </div>
+        <div class="d-string" id="d2">
+          <img class="hidden" src="NoteImages\d0.jpg" alt="F# on D String D2" />
+        </div>
+        <div class="d-string" id="d3">
+          <img class="hidden" src="NoteImages\d0.jpg" alt="G on D String D3" />
+        </div>
+      </div>
+      <div class="g-string-all">
+        <div class="g-string" id="g0">
+          <img class="hidden" src="NoteImages\g0.jpg" alt="G on G String G0" />
+        </div>
+        <div class="g-string" id="g1">
+          <img class="hidden" src="NoteImages\g0.jpg" alt="A on G String G1" />
+        </div>
+        <div class="g-string" id="g2">
+          <img class="hidden" src="NoteImages\g0.jpg" alt="B on G String G2" />
+        </div>
+        <div class="g-string" id="g3">
+          <img class="hidden" src="NoteImages\g0.jpg" alt="C on G String G3" />
+        </div>
+      </div>
+    </section>
+    <section id="a-string-note-name-buttons">
+      <button
+        class="note-name-button hidden"
+        id="A"
+        data-notename="a"
+        onclick="checkAnswer(event)"
+      >
+        A
+      </button>
+      <button
+        class="note-name-button hidden"
+        id="B"
+        data-notename="b"
+        onclick="checkAnswer(event)"
+      >
+        B
+      </button>
+      <button
+        class="note-name-button hidden"
+        id="C#"
+        data-notename="c#"
+        onclick="checkAnswer(event)"
+      >
+        C#
+      </button>
+      <button
+        class="note-name-button hidden"
+        id="D"
+        data-notename="d"
+        onclick="checkAnswer(event)"
+      >
+        D
+      </button>
+      <!-- <button class="note-name-button hidden" id="E">E</button> -->
+      <!-- <button class="note-name-button hidden" id="F">F</button> -->
+      <!-- <button class="note-name-button hidden" id="G">G</button> -->
+    </section>
+    <section id="bottom">
+      <div id="happy-face" class="hidden">&#128516;</div>
+      <div id="sad-face" class="hidden">&#128543;</div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
+    <!-- <script src="confetti.js"></script> -->
+  </body>
+</html>
