@@ -94,4 +94,5 @@ restart.addEventListener("click", () => {
   startWindow.classList.remove("hidden");
   answer.classList.add("hidden");
   restart.classList.add("hidden");
+  answerImage.classList.add("hidden");
 });
