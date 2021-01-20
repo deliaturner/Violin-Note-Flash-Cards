@@ -1,9 +1,9 @@
 body {
-  background-color: lightblue;
+  background-color: rgb(89, 201, 238);
   font-family: "Amiri", serif;
 }
 
-#start {
+#start-window {
   width: 50vh;
   background-color: whitesmoke;
   border: 1px solid rgb(27, 200, 216);
@@ -11,24 +11,33 @@ body {
   margin: 30px auto;
   padding: 10%;
   font-size: 30px;
+  font-weight: bolder;
   text-align: center;
 }
 
-#start-button {
-  width: 10em;
-  margin: 30px;
-  padding: 10px;
-  font-weight: bolder;
-  border: 1px solid darkslateblue;
-  border-radius: 5px;
-  color: blue;
-  font-size: 20px;
-  transition-duration: 0.3s;
+#string-choices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 30vh;
+  justify-content: center;
 }
 
-#start-button:hover {
-  color: lightyellow;
-  background-color: coral;
+.pick-string {
+  font-size: 4vh;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 40%;
+  margin: 10px;
+}
+
+.pick-string:hover,
+.note-name-button-display:hover,
+#restart:hover,
+#answer-button:hover {
+  color: blue;
+  background-color: hsl(46, 85%, 82%);
 }
 
 .note-display {
@@ -37,12 +46,12 @@ body {
   margin: 10vh;
 }
 
-#a-string-note-name-buttons {
+#string-note-name-buttons {
   display: flex;
   justify-content: space-evenly;
 }
 
-.note-name-button {
+.note-name-button-display {
   background-color: white;
   border: 1px solid black;
   border-radius: 5px;
@@ -50,14 +59,37 @@ body {
   padding: 10px 20px;
 }
 
-.note-name-button:hover {
-  background-color: orange;
-}
-
+#faces,
 #bottom {
   display: flex;
   justify-content: center;
   font-size: 60px;
+}
+
+#answer-button,
+#restart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 25%;
+  color: lightgray;
+  background-color: rgb(108, 176, 199);
+  transition-duration: 0.2s;
+}
+
+#restart {
+  left: 0;
+  width: 25%;
+}
+
+#answer-image {
+  width: 90%;
+  margin-top: 30px;
+  border-radius: 6px;
 }
 
 .hidden {

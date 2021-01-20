@@ -1,23 +1,36 @@
-const start = document.getElementById("start-button");
-const startWindow = document.querySelector("#start");
-const noteNameButtons = document.querySelectorAll(".note-name-button");
+const startWindow = document.querySelector("#start-window");
 let oldRandom = -1;
 const bottom = document.getElementById("bottom");
 const happy = document.getElementById("happy-face");
 const sad = document.getElementById("sad-face");
+const answer = document.getElementById("answer-button");
+const answerImage = document.getElementById("answer-image");
+const restart = document.getElementById("restart");
+const pickString = document.querySelectorAll(".pick-string");
 
-// Click on Start to remove Start Page, Display Note Names
-start.addEventListener("click", function () {
+pickString.forEach((item) => {
+  item.addEventListener("click", () => {
+    stringPicked = item.id;
+    noteNameButtons = document.querySelectorAll(
+      `.${stringPicked}` + "-note-name-button"
+    );
+    startGame();
+  });
+});
+
+function startGame() {
   startWindow.classList.add("hidden");
+  answer.classList.remove("hidden");
+  restart.classList.remove("hidden");
   randomNote();
   showNoteNames();
-});
+}
 
 //randomly pick a note and display
 function randomNote() {
   let newRandom = Math.floor(Math.random() * 4);
   if (newRandom !== oldRandom) {
-    randomNoteId = "a" + `${newRandom}`;
+    randomNoteId = stringPicked + `${newRandom}`;
     displayImage = document.getElementById(`${randomNoteId}`);
     displayImage.classList.remove("hidden");
     showNoteNames();
@@ -26,9 +39,8 @@ function randomNote() {
 }
 
 function checkAnswer(e) {
+  answerImage.classList.add("hidden");
   if (e.target.dataset.notename === displayImage.dataset.notename) {
-    console.log("YAY");
-    //set Time out for congrats window, setTimeout, reset and randomNote
     confetti.start(1000);
     showHappy();
     setTimeout(() => {
@@ -37,12 +49,10 @@ function checkAnswer(e) {
       randomNote();
     }, 700);
   } else {
-    console.log("BOO");
     showSad();
     setTimeout(() => {
       hideSad();
     }, 700);
-    //sad, try again, setTimeout do not reset
   }
 }
 
@@ -74,3 +84,14 @@ function showSad() {
 function hideSad() {
   sad.classList.add("hidden");
 }
+
+answer.addEventListener("click", () => {
+  document.getElementById("answer-image").classList.toggle("hidden");
+});
+
+restart.addEventListener("click", () => {
+  hideAll();
+  startWindow.classList.remove("hidden");
+  answer.classList.add("hidden");
+  restart.classList.add("hidden");
+});
