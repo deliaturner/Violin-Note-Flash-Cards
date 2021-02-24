@@ -9,6 +9,10 @@ body {
   font-family: "Amiri", serif;
 }
 
+*:focus {
+  outline: none;
+}
+
 #start-window {
   width: 50vh;
   background-color: whitesmoke;
@@ -45,9 +49,7 @@ body {
 }
 
 .pick-string:hover,
-.note-name-button-display:hover,
-#restart:hover,
-#answer-button:hover {
+.note-name-button-display:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -61,6 +63,7 @@ img {
   width: 410px;
   height: 270px;
   object-fit: fill;
+  border-radius: 5px;
 }
 
 #string-note-name-buttons {
@@ -96,6 +99,17 @@ img {
   color: lightgray;
   background-color: rgb(108, 176, 199);
   transition-duration: 0.2s;
+}
+
+#restart:hover,
+#answer-button:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.3s;
+  opacity: 0.8;
+  color: rgb(102, 102, 102);
+  background-color: rgb(179, 224, 240);
 }
 
 #restart {
