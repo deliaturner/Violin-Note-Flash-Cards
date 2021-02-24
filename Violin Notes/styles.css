@@ -38,18 +38,23 @@ body {
   margin: 10px;
 }
 
-.pick-string:hover,
-.note-name-button-display:hover,
-#restart:hover,
-#answer-button:hover {
-  color: blue;
-  background-color: hsl(46, 85%, 82%);
-}
-
 .note-display {
   display: flex;
   justify-content: center;
   margin: 10vh;
+}
+
+.pick-string:hover,
+.note-name-button-display:hover,
+#restart:hover,
+#answer-button:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.3s;
+  opacity: 0.8;
+  background-color: white;
+  border: 2px solid light gray;
 }
 
 img {
@@ -64,8 +69,8 @@ img {
 }
 
 .note-name-button-display {
-  background-color: white;
-  border: 1px solid gray;
+  background-color: whitesmoke;
+  border: 1px solid white;
   border-radius: 5px;
   font-size: 8vh;
   padding: 10px 20px;
