@@ -94,11 +94,12 @@ img {
   width: 25%;
   border: none;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   font-size: 25%;
-  color: lightgray;
-  background-color: rgb(108, 176, 199);
+  color: rgb(77, 77, 77);
+  background-color: rgb(179, 224, 240);
   transition-duration: 0.2s;
+  opacity: 0.5;
 }
 
 #restart:hover,
@@ -108,8 +109,8 @@ img {
   transform: scale(1.1);
   transition: 0.3s;
   opacity: 0.8;
-  color: rgb(102, 102, 102);
-  background-color: rgb(179, 224, 240);
+  color: lightgray;
+  background-color: rgb(108, 176, 199);
 }
 
 #restart {
@@ -119,6 +120,8 @@ img {
 
 #answer-image {
   width: 90%;
+  height: auto;
+  object-fit: fill;
   margin-top: 30px;
   border-radius: 6px;
 }
