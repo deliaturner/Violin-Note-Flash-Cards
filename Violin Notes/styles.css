@@ -16,8 +16,8 @@ body {
 #start-window {
   width: 50vh;
   background-color: whitesmoke;
-  border: 1px solid rgb(27, 200, 216);
-  border-radius: 5px;
+  border: none;
+  border-radius: 10px;
   margin: 30px auto;
   padding: 10%;
   font-size: 30px;
@@ -129,3 +129,5 @@ img {
 .hidden {
   display: none;
 }
+
+/* border shadow */
