@@ -41,7 +41,7 @@ function randomNote() {
 function checkAnswer(e) {
   answerImage.classList.add("hidden");
   if (e.target.dataset.notename === displayImage.dataset.notename) {
-    confetti.start(1000);
+    // confetti.start(1000, 50, 150);
     showHappy();
     setTimeout(() => {
       hideHappy();
