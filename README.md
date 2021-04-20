@@ -7,4 +7,4 @@ first, then the E, then D, then G. This app allows them to pick which string the
 want to learn, and presents them with images. They can click a note name, and they
 are rewarded with confetti and a happy face. If they pick incorrectly, a sad face
 appears and the app waits for them to try again. I developed this for a few students
-between the ages of 5-6, so I kept it very light and cute.
+between the ages of 5-6, so I kept it quick, light, and cute.
